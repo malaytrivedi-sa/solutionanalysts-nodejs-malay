@@ -3,26 +3,26 @@ import {
   } from "class-validator";
   import { Model } from "../../model";
   
-  export class ArticlesModel extends Model {
+  export class CommentModel extends Model {
     @IsNotEmpty()
     public nickname: string;
   
     @IsNotEmpty()
-    public title: string;
+    public content: string;
   
     @IsNotEmpty()
-    public content: string;
+    public articlesId: number;
     constructor(body: any) {
       super();
       const {
         nickname,
         content,
-        title,
+        articlesId,
     } = body;
 
     this.nickname = nickname;
     this.content = content;
-    this.title = title;
+    this.articlesId = articlesId;
     }
   }
   

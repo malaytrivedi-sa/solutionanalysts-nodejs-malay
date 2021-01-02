@@ -7,8 +7,6 @@ import * as l10n from "jm-ez-l10n"; // this module for translation language
 import * as jmEzMySql from "jm-ez-mysql"; //this module for mysql
 import * as methodOverride from "method-override"; // simulate DELETE and PUT (express4)
 import * as morgan from "morgan"; // log requests to the console (express4)
-import * as path from "path";
-import { ResponseBuilder } from "./helpers/responseBuilder";
 import { Routes } from "./routes";
 
 dotenv.config();
