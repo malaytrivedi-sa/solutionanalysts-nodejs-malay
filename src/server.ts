@@ -66,9 +66,8 @@ export class App {
     this.app.use(bodyParser.json({ type: "application/vnd.api+json" })); // parse application/vnd.api+json as json
     this.app.use(methodOverride());
     const routes = new Routes(NODE_ENV);
-    this.app.use("/api", routes.path());
+    this.app.use("/", routes.path());
     this.app.listen(PORT, () => {
-      
     });
   }
 }
